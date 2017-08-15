@@ -88,9 +88,7 @@ var ChooseBackgroundLayer = cc.Layer.extend({
         var index = level-1;
         var button = this.buttonArray[index];
         var node = new RouteButtonEffect();
-        this.scrollView.addChild(node,5);
+        this.scrollView.addChild(node,this.zOrderMap.routeButtonEffect);
         node.setPosition(button.getPosition());
-        cc.log("loadLevelEffec正常");
-
     }
 });

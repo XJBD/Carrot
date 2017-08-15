@@ -1,6 +1,6 @@
 var EffectNode = cc.Sprite.extend({
-    ctor:function () {
-        this._super();
+    ctor:function (filename,rect,rotated) {
+        this._super(filename,rect,rotated);
         this.loadAction();
     },
     loadAction:function () {
