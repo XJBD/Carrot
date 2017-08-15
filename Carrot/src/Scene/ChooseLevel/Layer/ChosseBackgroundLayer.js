@@ -7,7 +7,8 @@ var ChooseBackgroundLayer = cc.Layer.extend({
         this.loadBackground();
         this.loadProperty();
         this.loadTiledMap();
-        this.loadRoute(13);
+        //this.loadRoute(13);
+        this.loadLevel(1);
     },
     loadProperty:function () {
         this.zOrderMap.route = 1;
@@ -78,5 +79,18 @@ var ChooseBackgroundLayer = cc.Layer.extend({
             node.y = this.scrollView.getInnerContainerSize().height/2;
             this.scrollView.addChild(node,this.zOrderMap.route);
         }
+    },
+    loadLevel:function (level) {
+        this.loadRoute(level);
+        this.loadLevelEffect(level);
+    },
+    loadLevelEffect:function (level) {
+        var index = level-1;
+        var button = this.buttonArray[index];
+        var node = new RouteButtonEffect();
+        this.scrollView.addChild(node,5);
+        node.setPosition(button.getPosition());
+        cc.log("loadLevelEffec正常");
+
     }
 });

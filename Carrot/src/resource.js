@@ -78,7 +78,8 @@ var res = {
     stagepoint_gate_png:"res/ChooseLevel/stagepoint_gate.png",
     stagepoint_time_png:"res/ChooseLevel/stagepoint_time.png",
     route_plist:"res/ChooseLevel/route.plist",
-    route_png:"res/ChooseLevel/route.png"
+    route_png:"res/ChooseLevel/route.png",
+    stagemap_local_png:"res/ChooseLevel/stagemap_local.png"
 
 
 

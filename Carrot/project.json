@@ -20,6 +20,7 @@
         "src/Scene/ChooseLevel/Layer/ChosseBackgroundLayer.js",
         "src/Scene/ChooseLevel/ChooseLevel.js",
         "src/Scene/ChooseLevel/Layer/chooseUI.js",
-        "src/Scene/MainMenu/Layer/UnlockLayer.js"
+        "src/Scene/MainMenu/Layer/UnlockLayer.js",
+        "src/Scene/ChooseLevel/routeButtonEffect.js"
     ]
 }
