@@ -74,7 +74,10 @@ cc.game.onStart = function(){
     //load resources
     cc.LoaderScene.preload(g_resources, function () {
         cc.director.runScene(new MainMenuScene());
-        //cc.director.runScene(new ChooseLevelScene());
+
     }, this);
+
+    //GameManager.loadLevelData(0);
+    //cc.log(GameManager.popNextMonsterGroupData());
 };
 cc.game.run();

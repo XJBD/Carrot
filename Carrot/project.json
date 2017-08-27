@@ -17,12 +17,24 @@
         "src/Scene/MainMenu/Layer/Main.js",
         "src/Scene/MainMenu/MainMenu.js",
         "src/define.js",
-        "src/Scene/ChooseLevel/Layer/ChosseBackgroundLayer.js",
+        "src/Scene/ChooseLevel/Layer/ChooseBackgroundLayer.js",
         "src/Scene/ChooseLevel/ChooseLevel.js",
         "src/Scene/ChooseLevel/Layer/chooseUI.js",
         "src/Scene/MainMenu/Layer/UnlockLayer.js",
         "src/Scene/ChooseLevel/routeButtonEffect.js",
         "src/Data/LevelData.js",
-        "src/Manager/GameManager.js"
+        "src/Manager/GameManager.js",
+        "src/Scene/GamePlay/GamePlay.js",
+        "src/Scene/GamePlay/Layer/GPBackground.js",
+        "src/Scene/GamePlay/Layer/GPUi.js",
+        "src/Scene/GamePlay/Layer/GPMenu.js",
+        "src/Scene/GamePlay/Layer/GPMain.js",
+        "src/Scene/GamePlay/Node/Monster.js",
+        "src/Scene/GamePlay/Node/TowerPanel.js",
+        "src/Scene/GamePlay/Node/TowerBase.js",
+        "src/Scene/GamePlay/Node/Tower.js",
+        "src/Scene/GameResult/GameResult.js",
+        "src/Scene/GameResult/Layer/GRBackground.js",
+        "src/Scene/GameResult/Layer/GRMain.js"
     ]
 }

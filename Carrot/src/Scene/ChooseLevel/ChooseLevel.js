@@ -3,6 +3,9 @@ var ChooseLevelScene = cc.Scene.extend({
     chooseUILayer:null,
     ctor:function () {
         this._super();
+        if (!cc.audioEngine.isMusicPlaying()) {
+            cc.audioEngine.playMusic("res/Sound/MainMenu/BGMusic.mp3", true);
+        }
     },
     onEnter:function () {
         this._super();

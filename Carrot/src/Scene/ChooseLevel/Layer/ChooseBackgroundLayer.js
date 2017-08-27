@@ -63,7 +63,12 @@ var ChooseBackgroundLayer = cc.Layer.extend({
         switch (type){
             case ccui.Widget.TOUCH_ENDED:
                 var level = sender.getTag();
-                // TODO:加载关卡数据，进玩法场景
+                cc.audioEngine.stopMusic();
+                cc.LoaderScene.preload(GamePlay_resources,function () {
+                    GameManager.loadLevelData(level);
+                    //cc.log(GameManager.popNextMonsterGroupData());
+                    cc.director.runScene(new GamePlayScene());
+                },this);
                 cc.log(sender.getTag().toString());
             break;
         }

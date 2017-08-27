@@ -1,4 +1,5 @@
 var GameManager = {
+
     level:0,
     levelData:[],
     themeID:0,
@@ -56,7 +57,7 @@ var GameManager = {
         this.isWin = false;
 
         this._loadMonsterData();
-        //cc.log(this._monsterDataArray);
+        //cc.log(this._monsterDataArray[0]);
     },
     _loadMonsterData:function () {
         var group;  //关卡里的波数
@@ -82,6 +83,104 @@ var GameManager = {
         }
         var teamData = this.monsterGroup[this._groupIndex].team[this._teamIndex];
         var monsterData = {};
+        monsterData.group = this._groupIndex;
+        monsterData.name = teamData.name;
+        monsterData.blood = teamData.blood;
+        monsterData.speed = teamData.speed;
+        monsterData.index = this._teamMonsterIndex;
+        this._teamMonsterIndex++;
+        if (this._teamMonsterIndex > this._teamMonsterCount){
+            this._enterNextTeam();
+        }
+        return monsterData;
+    },
+    _enterNextTeam:function () {
+        this._teamMonsterIndex = 0;
+        this._teamIndex++;
+        if (this._teamIndex > this._teamCount) {
+            this._enterNextGroup();
+        }
+        else {
+            this._teamMonsterCount = this.monsterGroup[this._groupIndex].team[this._teamIndex].count - 1;
+        }
+    },
+    _enterNextGroup:function () {
+        this._groupIndex++;
+        if (this._groupIndex > this.maxGroup){
+            this.isMonsterGetFinish = true;
+            return;
+        }
+        this._teamIndex = 0;
+        this._teamCount = this.monsterGroup[this._groupIndex].team.length - 1;
+        this._teamMonsterIndex = 0;
+        this._teamMonsterCount = this.monsterGroup[this._groupIndex].team[this._teamIndex].count - 1;
+    },
+    popNextMonsterGroupData:function () {
+        var groupData = [];
+        if (this.group <= this.maxGroup){
+            this.group++;
+            groupData = this._monsterDataArray[0];
+            this._monsterDataArray.splice(0,1);
 
+            var event = new cc.EventCustom(zh.EventName.GP_UPDATE_GROUP);
+            event.setUserData({group:this.group});
+            cc.eventManager.dispatchEvent(event);
+        }else {
+            groupData = [];
+        }
+        return groupData;
+    },
+
+    subtractCarrotBlood:function () {
+        this.carrotBlood = this.carrotBlood <=0 ? 0:this.carrotBlood - 1;
+        var event = new cc.EventCustom(zh.EventName.GP_UPDATE_CARROT_BLOOD);
+        event.setUserData({
+            blood:this.carrotBlood
+        });
+        cc.eventManager.dispatchEvent(event);
+
+        if (this.carrotBlood == 0) {
+            var gameOverEvent = new cc.EventCustom(zh.EventName.GP_GAME_OVER);
+            gameOverEvent.setUserData({
+                isWin:false
+            });
+            cc.eventManager.dispatchEvent(gameOverEvent);
+        }
+    },
+    ///////
+    getThemeID:function () {
+        return this.themeID;
+    },
+    getGold:function () {
+        return this.startGold;
+    },
+    getGroup:function () {
+        return this.group;
+    },
+    getMaxGroup:function () {
+        return this.maxGroup;
+    },
+    getLevel:function () {
+        return this.level +1;
+    },
+    getCurrGroupMonsterSum:function () {
+        var monsterCount = 0;
+        var team = this.monsterGroup[this.group - 1].team;
+        for (var i = 0; i< team.length; i++) {
+            monsterCount += team[i].count;
+        }
+        return monsterCount;
+    },
+    getGroupInterval:function () {
+        return this.groupInterval;
+    },
+    getEnemyInterval:function () {
+        return this.enemyInterval;
+    },
+    setIsWin:function (isWin) {
+        this.isWin = isWin;
+    },
+    getIsWin:function () {
+        return this.isWin;
     }
-}
+};

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a419d81e-3058-44f5-aa16-4d1b705740b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Carrot/src/Data/LevelData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Carrot/src/Manager/GameManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carrot/project.json" afterPath="$PROJECT_DIR$/Carrot/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carrot/src/Scene/ChooseLevel/Layer/ChosseBackgroundLayer.js" afterPath="$PROJECT_DIR$/Carrot/src/Scene/ChooseLevel/Layer/ChosseBackgroundLayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Carrot/src/Scene/ChooseLevel/routeButtonEffect.js" afterPath="$PROJECT_DIR$/Carrot/src/Scene/ChooseLevel/routeButtonEffect.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/Carrot/src/Manager/GameManager.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="709">
-              <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#_loadMonsterData#0;n#_loadMonsterData#0;n#!!block;n#GameManager#0;n#!!top" expanded="false" />
               </folding>
@@ -353,7 +348,7 @@
       <workItem from="1501325541096" duration="2225000" />
       <workItem from="1501847899787" duration="599000" />
       <workItem from="1502700908700" duration="2369000" />
-      <workItem from="1502783480917" duration="19439000" />
+      <workItem from="1502783480917" duration="19496000" />
     </task>
     <task id="LOCAL-00001" summary="Carrot2">
       <created>1502796837006</created>
@@ -362,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502796837006</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Carrot2">
+      <created>1502813849591</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1502813849591</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109433000" />
+    <option name="totallyTimeSpent" value="109490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -740,7 +742,7 @@
     <entry file="file://$PROJECT_DIR$/Carrot/src/Manager/GameManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#_loadMonsterData#0;n#_loadMonsterData#0;n#!!block;n#GameManager#0;n#!!top" expanded="false" />
           </folding>

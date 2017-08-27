@@ -4,7 +4,7 @@ var MainMenuScene = cc.Scene.extend({
     unlockLayer:null,
     ctor:function () {
         this._super();
-        //cc.audioEngine.playMusic("res/Sound/MainMenu/BGMusic.mp3",true);
+        cc.audioEngine.playMusic("res/Sound/MainMenu/BGMusic.mp3",true);
     },
     onEnter:function () {
         this._super();
